@@ -6,8 +6,7 @@ class Smiles:
         mol = Chem.MolFromSmiles(smiles)
     
         if mol:            
-            canonical_smiles = Chem.MolToSmiles(mol, isomericSmiles=True)
-            return canonical_smiles
+            return Chem.MolToSmiles(mol, isomericSmiles=True)
         
         return None
   
