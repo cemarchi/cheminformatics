@@ -3,7 +3,7 @@ from rdkit.Chem import AllChem, MACCSkeys
 from rdkit.Avalon import pyAvalonTools
 
 
-class Fingerprint:
+class MolecularFingerprint:
 
     def create_atom_pair(self, smiles, nBits=2048):
         molecule = Chem.MolFromSmiles(smiles)
@@ -60,4 +60,5 @@ class Fingerprint:
             return pyAvalonTools.GetAvalonFP(molecule)
         
         return None
+
 
